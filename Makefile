@@ -17,7 +17,7 @@ SRC_DIR := ./srcs/
 OBJ_DIR := ./objects/
 INC_DIR := ./inc/
 
-SRCS := main.c print.c recursive_output.c
+SRCS := main.c print.c recursive_output.c quick_sort.c
 OBJ = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
 
 CC := gcc

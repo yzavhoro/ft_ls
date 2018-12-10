@@ -11,7 +11,7 @@ t_params *g_params;
 void join_node(struct dirent *dp, t_file ** files_list)
 {
 	t_file			*new_f;
-	struct stat st;
+	struct stat		st;
 
 	if (!files_list || (!DISPLAY_HIDDEN && dp->d_name[0] == '.'))
 	{
@@ -93,5 +93,6 @@ int main()//int ac, char **av)
 	subdirs->name = ".";
 	subdirs->next = NULL;
 	print_recursively(subdirs);
+
     return (0);
 }

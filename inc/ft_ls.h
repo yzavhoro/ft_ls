@@ -40,4 +40,8 @@ extern t_params * g_params;
 void					print_with_width(const char *str, int width);
 void					print_recursively(t_subdirs * subdirs);
 t_file					*read_dir(char *dir_name);
+void					quick_sort(t_file **array, int start, int end, int (*f)(t_file*, t_file*));
+void sort(t_file ** files);
+t_file **to_array(t_file *list);
+void print(t_file **files);
 #endif
