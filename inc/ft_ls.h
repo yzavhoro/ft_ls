@@ -18,16 +18,8 @@ typedef struct			s_file {
 	struct s_file		*next;
 }						t_file;
 
-typedef struct			s_ls_flags {
-	char				a : 1;
-}						t_ls_flags;
-
 typedef struct			s_params {
-	unsigned int		count;
-	unsigned int		cols;
-	unsigned int		col_wdth;
-	t_file				*first;
-	t_ls_flags			flags;
+	char				flags;
 }						t_params;
 
 typedef struct			s_subdirs {
