@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include "../inc/ft_ls.h"
 
-void swap(t_file ** array, int idx_a, int idx_b)
+static void qs_swap(t_file ** array, int idx_a, int idx_b)
 {
 	t_file* tmp;
 
@@ -15,7 +15,7 @@ void swap(t_file ** array, int idx_a, int idx_b)
 	array[idx_b] = tmp;
 }
 
-int partition(t_file **array, int start, int end, int (*sorted)(t_file*, t_file*)) {
+static int partition(t_file **array, int start, int end, int (*sorted)(t_file*, t_file*)) {
 	t_file *pivot;
 	int i;
 	int j;
@@ -28,11 +28,11 @@ int partition(t_file **array, int start, int end, int (*sorted)(t_file*, t_file*
 		if (!(sorted(array[j], pivot)))
 		{
 			i++;
-			swap(array, i, j);
+			qs_swap(array, i, j);
 		}
 		j++;
 	}
-	swap(array, i + 1, end);
+	qs_swap(array, i + 1, end);
 	return (i + 1);
 }
 
